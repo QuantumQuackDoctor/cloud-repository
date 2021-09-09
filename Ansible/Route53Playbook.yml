@@ -2,6 +2,9 @@
 - name: create Route 53
   hosts: localhost
   tasks:
+  - name: create a public zone
+  community.aws.route53_zone:
+    zone: drscrumptious.com
   - name: Add drscrumptious.com as an A record with 3 IPs and wait until the changes have been replicated
     community.aws.route53:
       state: create
