@@ -6,10 +6,10 @@ pipeline {
     stages {
         stage('Terraform Init') {
             steps {
-                sh 'ls'
-                sh 'cd Terraform'
-                sh 'ls'
-                sh 'terraform init /Terraform'
+                dir('Terraform') {
+                    sh 'ls'
+                    sh 'terraform init'
+                }
             }
         }
         stage('Terraform Plan') {
