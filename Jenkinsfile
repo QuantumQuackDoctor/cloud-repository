@@ -7,19 +7,19 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 sh 'ls'
-                sh 'cd ./Terraform'
+                sh 'cd Terraform'
                 sh 'ls'
-                sh 'terraform init'
+                sh 'terraform init /Terraform'
             }
         }
         stage('Terraform Plan') {
             steps {
-                sh 'terraform plan'
+                sh 'terraform plan /Terraform'
             }
         }
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply -auto-approve /Terraform'
             }
         }
         stage('Route53') {
