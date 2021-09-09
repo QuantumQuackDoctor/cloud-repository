@@ -86,7 +86,7 @@ resource "aws_network_interface" "net_interface" {
 resource "aws_instance" "QQD-App" {
   ami           = "ami-0233c2d874b811deb"
   instance_type = "t2.large"
-  key_name      = "terraform"
+  key_name      = "qqd-keypair"
   
   network_interface {
     network_interface_id = aws_network_interface.net_interface.id
