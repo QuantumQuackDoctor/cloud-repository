@@ -24,11 +24,11 @@ pipeline {
             }
 
         }
-        stage('CloudFront') {
-            steps {
-                //sh 'ansible-playbook S3BucketDeploy.yml'
-            }
+        // stage('CloudFront') {
+        //     steps {
+        //         //sh 'ansible-playbook S3BucketDeploy.yml'
+        //     }
 
-        }
+        // }
     }
 }
