@@ -28,7 +28,7 @@ pipeline {
         stage('Route53') {
             steps {
                 dir('Ansible') {
-                    sh 'ansible-playbook S3BucketDeploy.yml'
+                    sh 'ansible-playbook Route53Playbook.yml'
                 }
             }
 
