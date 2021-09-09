@@ -5,9 +5,7 @@
   - name: "Create zone, record and state"
     community.aws.route53:
       state: create
-      zone: drscrumptious.com
       record: drscrumptious.com
       type: A
-      ttl: 7200
       value: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       wait: yes
