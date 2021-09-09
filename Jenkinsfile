@@ -25,9 +25,17 @@ pipeline {
                 }
             }
         }
+        stage('Terraform Apply') {
+            steps {
+                dir('Terraform') {
+                    sh 'terraform destroy -auto-approve'
+                }
+            }
+        }
         stage('Route53') {
             steps {
                 dir('Ansible') {
+                    sh 'ansible-galaxy collection install community.aws'
                     sh 'ansible-playbook Route53Playbook.yml'
                 }
             }
