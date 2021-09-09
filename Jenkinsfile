@@ -7,25 +7,29 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 dir('Terraform') {
-                    sh 'ls'
                     sh 'terraform init'
                 }
             }
         }
         stage('Terraform Plan') {
             steps {
-                sh 'terraform plan /Terraform'
+                dir('Terraform') {
+                    sh 'terraform plan'
+                }
             }
         }
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply -auto-approve /Terraform'
+                dir('Terraform') {
+                    sh 'terraform apply -auto-approve'
+                }
             }
         }
         stage('Route53') {
             steps {
-                sh 'cd ../Ansible'
-                sh 'ansible-playbook S3BucketDeploy.yml'
+                dir('Ansible') {
+                    sh 'ansible-playbook S3BucketDeploy.yml'
+                }
             }
 
         }
