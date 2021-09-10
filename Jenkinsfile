@@ -25,13 +25,13 @@ pipeline {
                 }
             }
         }
-        stage('Terraform Destroy') {
-            steps {
-                dir('Terraform') {
-                    sh 'terraform destroy -auto-approve'
-                }
-            }
-        }
+        // stage('Terraform Destroy') {
+        //     steps {
+        //         dir('Terraform') {
+        //             sh 'terraform destroy -auto-approve'
+        //         }
+        //     }
+        // }
         stage('Route53') {
             steps {
                 dir('Ansible') {
