@@ -4,10 +4,10 @@
   tasks:
   - name: "Create zone, record and state"
     community.aws.route53:
-      state: create
+      state: present
       zone: drscrumptious.com
       record: drscrumptious.com
       type: A
       alias: True
-      alias_hosted_zone_id: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
+      alias_host_zone_id: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       wait: yes
