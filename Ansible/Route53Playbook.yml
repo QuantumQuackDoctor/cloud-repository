@@ -6,9 +6,6 @@
     community.aws.route53:
       state: present
       zone: drscrumptious.com
-      record: s3-website.us-east-2.amazonaws.com
+      record: drscrumptious.drscrumptious.com
       type: A
-      value: s3-website.us-east-2.amazonaws.com
-      alias: True
-      alias_hosted_zone_id: Z2O1EMRO9K5GLX
-      wait: yes
+      value: drscrumptious.drscrumptious.com
