@@ -6,7 +6,7 @@
     community.aws.route53:
       state: present
       zone: drscrumptious.com
-      record: drscrumptious.com
+      record: qqd-user-portal
       type: A
       value: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       alias: True
