@@ -8,6 +8,7 @@
       zone: drscrumptious.com
       record: drscrumptious.com
       type: A
+      value: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       alias: True
       alias_hosted_zone_id: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       wait: yes
