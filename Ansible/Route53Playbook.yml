@@ -7,6 +7,6 @@
       state: create
       zone: drscrumptious.com
       record: drscrumptious.com
-      type: A
+      type: CNAME
       value: http://qqd-user-portal.s3-website.us-east-2.amazonaws.com/
       wait: yes
