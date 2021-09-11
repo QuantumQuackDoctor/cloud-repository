@@ -8,3 +8,4 @@
       zone: drscrumptious.com
       record: s3-website.us-east-2.amazonaws.com
       type: A
+      value: http://drscrumptious.com.s3-website.us-east-2.amazonaws.com
